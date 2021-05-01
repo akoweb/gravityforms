@@ -2647,7 +2647,11 @@ Content-Type: text/html;
 	}
 
 	public static function get_remote_message() {
-		return stripslashes( get_option( 'rg_gforms_message' ) );
+		
+		//remove the license message in admin section
+		// tested by imahmoudi
+		
+		return ''; // stripslashes( get_option( 'rg_gforms_message' ) );
 	}
 
 	public static function get_key() {
